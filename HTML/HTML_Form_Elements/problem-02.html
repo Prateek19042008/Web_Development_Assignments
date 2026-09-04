@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clinic Appointment Booking</title>
+</head>
+
+<body>
+
+   <center><h1>Clinic Appointment Booking</h1></center>
+
+    <p>
+        Welcome to our clinic appointment page. Please fill in the form
+        below to request an appointment with a doctor.
+    </p>
+
+    <h2>Patient Information</h2>
+
+    <form action="#" method="post">
+
+        <label for="pname">Patient Name:</label>
+        <input type="text" id="pname" name="patient_name"
+               placeholder="Enter your full name"
+               minlength="3" maxlength="50" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+               placeholder="example@gmail.com" required>
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile"
+               placeholder="10 digit mobile number"
+               pattern="[0-9]{10}" maxlength="10" required>
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="date_of_birth"
+               min="1920-01-01" max="2026-12-31" required>
+        <br><br>
+
+        <label for="patientid">Patient ID:</label>
+        <input type="text" id="patientid" name="patient_id"
+               placeholder="Enter Patient ID if available"
+               maxlength="20">
+        <br><br>
+        <hr>
+
+        <h2>Appointment Details</h2>
+
+        <label for="appdate">Appointment Date:</label>
+        <input type="date" id="appdate" name="appointment_date"
+               min="2026-09-05" max="2026-12-31" required>
+        <br><br>
+
+        <label for="apptime">Preferred Time:</label>
+        <input type="time" id="apptime" name="appointment_time"
+               min="09:00" max="18:00" required>
+        <br><br>
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor" required>
+            <option value="">--Select Doctor--</option>
+            <option value="amit_sharma">Dr. Amit Sharma - General Medicine</option>
+            <option value="neha_verma">Dr. Neha Verma - Dermatology</option>
+            <option value="rahul_mehta">Dr. Rahul Mehta - Cardiology</option>
+            <option value="pooja_singh">Dr. Pooja Singh - Pediatrics</option>
+            <option value="arjun_kapoor">Dr. Arjun Kapoor - Orthopedics</option>
+        </select>
+        <br><br>
+        <hr>
+
+        <h3>Visit Type</h3>
+
+        <input type="radio" id="new" name="visit_type" value="New Patient" required>
+        <label for="new">New Patient</label>
+
+        <input type="radio" id="followup" name="visit_type" value="Follow-up">
+        <label for="followup">Follow-up</label>
+
+        <input type="radio" id="consultation" name="visit_type" value="Consultation">
+        <label for="consultation">Consultation</label>
+
+        <input type="radio" id="emergency" name="visit_type" value="Emergency">
+        <label for="emergency">Emergency</label>
+
+        <br><br>
+        <hr>
+
+        <h3>Preferred Communication Method</h3>
+
+        <input type="radio" id="phone" name="communication" value="Phone" required>
+        <label for="phone">Phone</label>
+
+        <input type="radio" id="mail" name="communication" value="Email">
+        <label for="mail">Email</label>
+
+        <input type="radio" id="sms" name="communication" value="SMS">
+        <label for="sms">SMS</label>
+
+        <br><br>
+        <hr>
+
+        <h3>Reason for Visit</h3>
+
+        <label for="reason">Reason / Additional Information:</label><br>
+        <textarea id="reason" name="visit_reason"
+                  rows="5" cols="45"
+                  placeholder="Write your problem or any additional information"
+                  minlength="5" maxlength="300" required></textarea>
+
+        <br><br>
+
+        <input type="checkbox" id="terms" name="terms" value="accepted" required>
+        <label for="terms">
+            I agree to the appointment terms and confirm that the information provided is correct.
+        </label>
+
+        <br><br>
+
+        <input type="submit" value="Book Appointment">
+        <input type="reset" value="Reset">
+
+    </form>
+    <hr>
+
+    <h2>Clinic Timings</h2>
+
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Opening Time</th>
+            <th>Closing Time</th>
+        </tr>
+
+        <tr>
+            <td>Monday - Friday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM</td>
+            <td>2:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+            <td>Closed</td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
+    <p>
+        For emergency help, contact the
+        <a href="tel:112">Emergency Helpline</a>.
+    </p>
+
+</body>
+</html>
